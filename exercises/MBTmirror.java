@@ -6,8 +6,9 @@ public  boolean MBTmirror(BinNode root1, BinNode root2)
         (root1!=null && root2==null) ||
       		root1.value()!=root2.value()) return false;
     else{
-        MBTmirror(root1.left(),root2.left());
-        MBTmirror(root1.right(),root2.right());
+        MBTmirror(root1.left(),root2.right());
+        MBTmirror(root1.right(),root2.left());
         return true;
     }
 }
+
